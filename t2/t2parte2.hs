@@ -24,3 +24,22 @@ isBin (x:xs)
 isBin' :: String -> Bool
 isBin' "" = False
 isBin' str = if(length(filter (\x -> (x/='0' && x/='1'))str)==0) then True else False
+
+-- 3) Encontra-se abaixo a definição parcial da função bin2dec :: [Int] -> Int, que converte uma lista de 0's e 1's (representando um número binário), em seu equivalente em decimal.
+
+--bin2dec :: [Int] -> Int
+--bin2dec [] = undefined
+--bin2dec bits = auxBin2Dec bits ((length bits)-1)
+
+-- Observe que:
+-- Usou-se undefined para o caso em que a função não tem resultado definido.
+-- Usou-se uma função auxiliar (auxBin2Dec) que recebe, como segundo argumento, o expoente que deverá multiplicar o primeiro elemento da lista.
+
+-- Implemente a função auxBin2Dec de forma recursiva, para que bin2dec funcione corretamente
+auxBin2Dec :: [Int] -> Int -> Int
+auxBin2Dec [] e = 0
+auxBin2Dec (x:xs) e = x * (2^e) + auxBin2Dec xs (e-1)
+
+bin2dec :: [Int] -> Int
+bin2dec [] = 0
+bin2dec bits = auxBin2Dec bits ((length bits)-1)
