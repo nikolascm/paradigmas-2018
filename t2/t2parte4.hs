@@ -40,3 +40,7 @@ shiftChar c x = if (elem c ['a'..'z']) then decodeChar((encodeChar c + x) `mod` 
 -- 2) Usando shiftChar, defina uma função encodeStr :: String -> Int -> String que codifique uma string usando um dado deslocamento.
 encodeStr :: String -> Int -> String
 encodeStr str x = map (\y -> shiftChar y x) str
+
+-- 3) Defina uma função countValids :: String -> Int, que receba uma string e retorne a quantidade de seus caracteres contidos no intervalo ['a'..'z']. 
+countValids :: String -> Int
+countValids str = length (filter (\x -> elem x ['a'..'z']) str)
