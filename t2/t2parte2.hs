@@ -43,3 +43,15 @@ auxBin2Dec (x:xs) e = x * (2^e) + auxBin2Dec xs (e-1)
 bin2dec :: [Int] -> Int
 bin2dec [] = 0
 bin2dec bits = auxBin2Dec bits ((length bits)-1)
+--bin2dec bits = bin2dec' bits ((length bits)-1)
+
+-- 4) Reescreva a função do exercício anterior de forma não-recursiva, usando funções pré-definidas em Haskell. Dê outro nome para a função (por exemplo, bin2dec').
+
+-- 5) Crie uma função recursiva dec2bin :: Int -> [Int] que receba um número inteiro positivo e retorne sua representação em binário, sob forma de uma lista de 0's e 1's. As funções auxiliares autorizadas aqui são mod, div e reverse.
+dec2bin :: Int -> [Int]
+dec2bin 0 = []
+dec2bin y = y `mod` 2 : dec2bin (y `div` 2)
+
+dec2bin' :: Int -> [Int]
+dec2bin' x = reverse (dec2bin x)
+
