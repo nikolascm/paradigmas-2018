@@ -1,3 +1,4 @@
+import Data.Char
 main :: IO ()
 main = return ()
 
@@ -55,3 +56,11 @@ dec2bin y = y `mod` 2 : dec2bin (y `div` 2)
 dec2bin' :: Int -> [Int]
 dec2bin' x = reverse (dec2bin x)
 
+-- 6) Implemente uma dessas funções: isHex :: String -> Bool ou hex2dec :: String -> Int ou dec2hex :: Int -> String, que são semelhantes às dos exercícios anteriores, porém com números hexadecimais no lugar de números binários.
+auxHex2dec :: String -> Int
+auxHex2dec [] = 0 
+auxHex2dec (x:xs) = digitToInt x * (16^(length xs)) + auxHex2dec xs 
+
+hex2dec :: String -> Int
+hex2dec [] = 0
+hex2dec bits = auxHex2dec bits
