@@ -35,4 +35,8 @@ chi2 os es = sum [((o-e)^2)/e | (o,e) <- zip os es]
 
 -- 1) Usando encodeChar e decodeChar, defina uma função shiftChar :: Char -> Int -> Char. Essa função, ao receber um caracter de 'a' a 'z', aplicará um deslocamento de 'n' unidades sobre ele, produzindo outro caracter no intervalo ['a'..'z']
 shiftChar :: Char -> Int -> Char
-shiftChar c x = if (elem c "a,...z") then decodeChar((encodeChar c + x) `mod` 26) else c
+shiftChar c x = if (elem c ['a'..'z']) then decodeChar((encodeChar c + x) `mod` 26) else c
+
+-- 2) Usando shiftChar, defina uma função encodeStr :: String -> Int -> String que codifique uma string usando um dado deslocamento.
+encodeStr :: String -> Int -> String
+encodeStr str x = map (\y -> shiftChar y x) str
