@@ -59,7 +59,18 @@ mesmaPosicao(A,L1,L2) :-
 	mesmaPosicao(A,T1,T2).
 
 % 9. Dada uma lista de N alunos, deseja-se escolher NP alunos (NP < N) para formar uma comissão. Para isso, defina um predicado comissao(NP,LP,C), que permita gerar as possíveis combinações C com NP elementos da lista LP. 
+comissao(0,_,[]).
+comissao(NP,LP,C) :-
+	C = [H|T],
+    NP > 0,
+    TamLista is NP-1,
+    func(H,LP,Tail),
+    comissao(TamLista,Tail,T).
 
+% Define Head, Lista inteira e Tail, nessa ordem
+func(H,[H|T],T).
+func(H,[_|T],R) :- 
+    func(H,T,R).
 
 % 10. Tem-se N azulejos 10cm x 10cm e, com eles, deve-se montar um conjunto de quadrados de modo a utilizar todos os azulejos dados, sem sobrepô-los. Inicialmente, deve-se montar o maior quadrado possível; então, com os azulejos que sobraram, deve-se montar o maior quadrado possível, e assim sucessivamente. Por exemplo, se forem dados 31 azulejos, o conjunto montado terá 4 quadrados. Para resolver este problema, você deverá definir um predicado azulejos(NA, NQ), de forma que NQ seja o número de quadrados que se deve montar com NA azulejos. 
 azulejos(0,0).
