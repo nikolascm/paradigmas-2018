@@ -2,26 +2,25 @@
     Nikolas Machado Corrêa - Paradigmas de Programação
     Trabalho 4: Resolvendo problemas da OBI em Prolog
 
-	OBI2013(Fase 1, Nível 2, Modalidade Iniciação)
+    OBI2013(Fase 1, Nível 2, Modalidade Iniciação)
     Problema: Acampamento
-    
-    Oito amigos (A, B,C, D, E, F, G e H) vão acampar durante o feriado. Eles
-	vão utilizar uma grande barraca, que permite acomodar duas fileiras de 
-	camas, cada uma com quatro camas, conforme a figura ao lado. Uma das 
-	fileiras é chamada de fileira da direita, e outra é chamada de
-	fileira da esquerda. Duas camas são vizinhas de lado se estão
-	na mesma fileira e têm números consecutivos.
-	
-	Cada cama de uma fileira tem uma cama vizinha de frente, da outra fileira: as camas 1 e 5 são vizinhas
-	de frente, as camas 2 e 6 são vizinhas de frente, as camas 3 e 7 são vizinhas de frente, as camas 4 e
-	8 são vizinhas de frente. Cada amigo vai dormir em uma cama, e as seguintes condições devem ser
-	obedecidas:
 
+    Oito amigos (A, B,C, D, E, F, G e H) vão acampar durante o feriado. Eles
+    vão utilizar uma grande barraca, que permite acomodar duas fileiras de 
+    camas, cada uma com quatro camas, conforme a figura ao lado. Uma das 
+    fileiras é chamada de fileira da direita, e outra é chamada de
+    fileira da esquerda. Duas camas são vizinhas de lado se estão
+    na mesma fileira e têm números consecutivos.
+
+    Cada cama de uma fileira tem uma cama vizinha de frente, da outra fileira: as camas 1 e 5 são vizinhas
+    de frente, as camas 2 e 6 são vizinhas de frente, as camas 3 e 7 são vizinhas de frente, as camas 4 e
+    8 são vizinhas de frente. Cada amigo vai dormir em uma cama, e as seguintes condições devem ser
+    obedecidas:
     • C e F não podem ser vizinhos de lado.
-	• G e H devem ser vizinhos de lado.
-	• F deve dormir na cama 6.
-	• Se E e H forem vizinhos de frente, então A deve dormir na cama 3.
-	• Se B dormir na fileira da direita, C deve dormir na fileira da esquerda.
+    • G e H devem ser vizinhos de lado.
+    • F deve dormir na cama 6.
+    • Se E e H forem vizinhos de frente, então A deve dormir na cama 3.
+    • Se B dormir na fileira da direita, C deve dormir na fileira da esquerda.
 */
 
 regra1(L) :-
