@@ -1,6 +1,6 @@
 /*
-	Nikolas Machado Corrêa - Paradigmas de Programação
-    Extra extra01b: Genealogia e linhagem da série The Vampire Diaries 
+  Nikolas Machado Corrêa - Paradigmas de Programação
+  Extra extra01b: Genealogia e linhagem da série The Vampire Diaries 
 */
 
 % Personagens Masculinos
