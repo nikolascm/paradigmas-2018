@@ -1,6 +1,6 @@
 /*
-	Nikolas Machado Corrêa - Paradigmas de Programação
-    Extra extra01a: Árvore genealógica da série Dark 
+  Nikolas Machado Corrêa - Paradigmas de Programação
+  Extra extra01a: Árvore genealógica da série Dark 
 */
 
 % Personagens Masculinos
