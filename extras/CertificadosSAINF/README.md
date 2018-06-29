@@ -1,4 +1,4 @@
-## Gerador de Certificados utilizado na SAINF 2018
+## Gerador de Certificados utilizado na VIII SAINF
 
 <p align="justify"> <b>Descrição:</b> Afim de automatizar o processo de geração de certificados do evento, cuja responsabilidade assumi, descobri (por curiosidade) uma API denominada <a href="https://itextpdf.com/">iText</a>, cuja função é permitir a edição de arquivos .pdf utilizando a linguagem Java. Assim, os nomes dos participantes constam em um .txt, que o programa efetua a leitura e gera os certificados. 😀 </p>
 
